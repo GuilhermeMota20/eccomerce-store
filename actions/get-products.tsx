@@ -8,7 +8,7 @@ interface Query {
   isFeatured?: boolean;
 };
 
-const URL = `${process.env.NEXT_PULIC_API_URL}/products`;
+const URL = `${process.env.NEXT_PUBLIC_API_URL}/products`;
 
 const getProducts = async (query: Query): Promise<Product[]> => {
   const url = qs.stringifyUrl({
