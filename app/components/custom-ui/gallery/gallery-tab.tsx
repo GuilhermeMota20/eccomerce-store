@@ -13,7 +13,7 @@ const GalleryTab: React.FC<GalleryTabProps> = ({
   return (
     <>
       <Tab className="relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-white">
-        {({ selected }) => (
+        {({ active }) => (
           <div>
             <span className="absolute h-full w-full aspect-square inset-0 overflow-hidden rounded-md">
               <Image
@@ -26,7 +26,7 @@ const GalleryTab: React.FC<GalleryTabProps> = ({
 
             <span className={cn(
               "absolute inset-0 rounded-md right-2 ring-offset-2",
-              selected ? "ring-black" : "ring-transparent"
+              active ? "ring-black" : "ring-transparent"
             )} />
           </div>
         )}
