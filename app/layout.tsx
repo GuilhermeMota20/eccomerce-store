@@ -5,6 +5,7 @@ import ToastProvider from '@/providers/toast-provider'
 import type { Metadata } from 'next'
 import { Urbanist } from 'next/font/google'
 import './globals.css'
+import BarMarket from './components/custom-ui/bar-market'
 
 const font = Urbanist({ subsets: ['latin'] })
 
@@ -24,9 +25,16 @@ export default function RootLayout({
         <ModalProvider />
         <ToastProvider />
 
-        <Navbar />
-        {children}
-        <Footer />
+        <div className='h-full flex flex-col justify-between'>
+          <BarMarket />
+          <Navbar />
+
+          <div className='flex-1'>
+            {children}
+          </div>
+
+          <Footer />
+        </div>
       </body>
     </html>
   )
